@@ -1,0 +1,39 @@
+{
+  "engines": {
+    "node": "6.2.2"
+  },
+  "scripts": {
+    "dev": "node dev-server.js",
+    "build": "webpack --config webpack.config.prod.js",
+    "postinstall": "npm run build",
+    "start": "nf start"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015-native-modules": "^6.6.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "compression": "^1.6.2",
+    "css-loader": "^0.23.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "foreman": "^1.4.1",
+    "morgan": "^1.7.0",
+    "postcss-calc": "^5.2.1",
+    "postcss-loader": "^0.9.1",
+    "postcss-pxtorem": "^3.3.1",
+    "precss": "^1.4.0",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0",
+    "react-hot-loader": "^3.0.0-beta.2",
+    "react-router": "^2.5.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.1.0-beta.15"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.1.0-beta.0"
+  }
+}
