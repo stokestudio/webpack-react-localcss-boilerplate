@@ -1,7 +1,7 @@
 # Webpack / React / Local CSS Boilerplate
 
-Features
-- Babel / ES2015
+## Features
+- ES2015 / Babel (stage 0)
 - Webpack 2 (beta)
 - React with react-router
 - Client-side
@@ -9,24 +9,26 @@ Features
   - Postcss calc, mixins, and pxtorem
   - Optimized cross-browser font rendering
   - HTML responsive meta tag
-- Local development
+- Development
   - Hot reloading of React components and CSS
-- Production asset builds
-  - Minification (both JS and CSS) and JS tree shaking
+- Production
+  - Minified asset builds (both JS and CSS) with JS tree shaking
   - Basic server boilerplate
   - Ready for Heroku deployment
-    - Automatic asset builds
-    - Optimized node server flags
+    - Automatic asset builds on push
+    - Optimized node flags for running server
 
-## Development
+## Running things
+
+### Development
 To run dev server with hot reloading:
 ```bash
 npm run dev
 ```
 
-## Production Build
+### Production
 To build production assets:
-*These will auto-build if deployed to Heroku.*
 ```bash
 npm run build
 ```
+*These will auto-build on push if deployed to Heroku.*
