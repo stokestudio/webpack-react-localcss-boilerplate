@@ -14,7 +14,7 @@ app.get('*', function (req, res) {
   if (req.accepts('html')) {
     res.sendFile(path.resolve('index.html'));
   } else {
-    res.status(404).end();
+    res.sendStatus(404);
   }
 });
 
