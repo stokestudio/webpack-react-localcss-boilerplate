@@ -5,7 +5,7 @@
 - Webpack 2 (beta)
 - React with react-router
 - Client-side
-  - CSS Autoprefixer targeting last 2 major versions of current browsers + IE11
+  - CSS Autoprefixer
   - Postcss calc, mixins, and pxtorem
   - Optimized cross-browser font rendering
   - HTML responsive meta tag
@@ -17,6 +17,9 @@
   - Ready for Heroku deployment
     - Automatic asset builds on push
     - Optimized node flags for running server
+- Supported Browsers: last 2 major versions of current browsers + IE11
+  - Configured in CSS Autoprefixer
+  - Promise polyfill for IE11
 
 ## Running things
 
