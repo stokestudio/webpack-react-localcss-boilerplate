@@ -1,40 +1,59 @@
 {
   "engines": {
-    "node": "6.3.x"
+    "node": "^6.3.1"
   },
   "scripts": {
     "dev": "node dev-server.js",
     "build": "webpack --config config/webpack.client.prod.js",
+    "optimize:svg": "svgo --multipass -f ./assets/images",
+    "optimize": "imageoptim --directory ./assets/images && npm run optimize:svg",
     "postinstall": "npm run build",
     "start": "nf start"
   },
   "dependencies": {
-    "autoprefixer": "^6.3.7",
+    "autoprefixer": "^6.4.0",
     "babel": "^6.5.2",
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015-native-modules": "^6.6.0",
+    "babel-core": "^6.13.2",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-lodash": "^3.2.7",
+    "babel-plugin-transform-react-constant-elements": "^6.9.1",
+    "babel-preset-es2015-native-modules": "^6.9.3",
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "compression": "^1.6.2",
     "css-loader": "^0.23.1",
-    "es6-promise": "^3.2.1",
     "express": "^4.14.0",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.3",
     "foreman": "^1.4.1",
+    "lodash": "^4.15.0",
     "morgan": "^1.7.0",
-    "postcss-calc": "^5.2.1",
-    "postcss-loader": "^0.9.1",
+    "postcss-assets": "^4.1.0",
+    "postcss-calc": "^5.3.0",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "postcss-loader": "^0.10.0",
+    "postcss-pseudo-class-any-link": "^1.0.0",
     "postcss-pxtorem": "^3.3.1",
     "precss": "^1.4.0",
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1",
+    "promise": "^7.1.1",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
     "react-hot-loader": "^3.0.0-beta.2",
-    "react-router": "^2.5.2",
+    "react-router": "^2.6.1",
     "style-loader": "^0.13.1",
-    "webpack": "^2.1.0-beta.15"
+    "webpack": "^2.1.0-beta.20",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.3.0",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^2.0.1",
+    "eslint-plugin-react": "^6.1.0",
+    "imageoptim-cli": "^1.14.8",
+    "svgo": "^0.6.6",
     "webpack-dev-server": "^2.1.0-beta.0"
+  },
+  "eslintConfig": {
+    "extends": "./config/eslint.js"
   }
 }

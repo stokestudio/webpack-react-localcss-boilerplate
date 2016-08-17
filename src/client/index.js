@@ -1,6 +1,3 @@
-// Promise polyfill for IE11
-require('es6-promise').polyfill();
-
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
