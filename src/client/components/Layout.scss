@@ -10,7 +10,12 @@
     padding: 0;
   }
 
-  body, input {
+  html {
+    /* Prevent font scaling when rotating iOS device */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body, button, input {
     color: $text-color;
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     line-height: 1.6;
@@ -18,8 +23,17 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  a:visited {
+  :any-link {
     color: blue;
+  }
+
+  button {
+    margin: 0; /* Override Safari default margin */
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
   }
 }
 
