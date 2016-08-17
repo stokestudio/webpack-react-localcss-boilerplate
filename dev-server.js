@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config.dev');
+var config = require('./config/webpack.client.dev');
 
 var PORT = 4000;
 

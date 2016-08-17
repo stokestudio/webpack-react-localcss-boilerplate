@@ -3,11 +3,14 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var webpack = require('webpack');
 
+var buildPath = path.resolve(__dirname, '..', 'build');
+var srcPath = path.resolve(__dirname, '..', 'src');
+
 module.exports = {
-  entry: './src/index',
+  entry: path.join(srcPath, 'index'),
 
   output: {
-    path: path.join(__dirname, 'build'),
+    path: buildPath,
     filename: 'bundle.js',
   },
 
@@ -39,7 +42,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'src')
+      include: srcPath
     }, {
       test: /\.scss$/,
       // ExtractTextPlugin is not yet compatible with Webpack 2
