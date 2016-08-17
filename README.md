@@ -31,7 +31,7 @@ To run dev server with hot reloading:
 npm run dev
 ```
 
-## Optimize Assets
+### Optimize Assets
 ```bash
 npm run optimize
 ```
