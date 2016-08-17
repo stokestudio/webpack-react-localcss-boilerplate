@@ -6,13 +6,15 @@
 - React with react-router
 - Client-side
   - CSS Autoprefixer
-  - Postcss calc, mixins, and pxtorem
+  - Postcss calc, mixins, pxtorem, and flexbox fixes
   - Optimized cross-browser font rendering
   - HTML responsive meta tag
+  - Ready for Google Analytics tracking compatible with react-router
 - Development
   - Hot reloading of React components and CSS
 - Production
   - Minified asset builds (both JS and CSS) with JS tree shaking
+  - Splits JS assets into chunks
   - Basic server boilerplate
   - Ready for Heroku deployment
     - Automatic asset builds on push
@@ -29,9 +31,19 @@ To run dev server with hot reloading:
 npm run dev
 ```
 
+## Optimize Assets
+```bash
+npm run optimize
+```
+
 ### Production
 To build production assets:
 ```bash
 npm run build
 ```
 *These will auto-build on push if deployed to Heroku.*
+
+Start server:
+```bash
+npm start
+```
