@@ -8,7 +8,7 @@ const app = express();
 app.use(morgan(process.env.NODE_ENV !== 'production' ? 'dev' : undefined));
 
 app.use(compression());
-app.use('/assets', express.static('build'));
+app.use('/assets', express.static('build/client'));
 
 app.get('*', function (req, res) {
   if (req.accepts('html')) {
