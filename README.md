@@ -47,3 +47,8 @@ Start server:
 ```bash
 npm start
 ```
+
+## Inspirations
+- [create-react-app](https://github.com/facebookincubator/create-react-app)
+- [react-universally](https://github.com/ctrlplusb/react-universally)
+- [react-hot-load-webpack-boilerplate](https://github.com/jackfranklin/react-hot-load-webpack-boilerplate) ([Screencast](http://javascriptplayground.com/blog/2016/06/react-webpack-workflow-screencast))
