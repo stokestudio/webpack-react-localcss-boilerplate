@@ -20,20 +20,25 @@ module.exports = {
   ],
 
   module: {
-    loaders: [ {
-      test: /\.html$/,
-      loader: 'html'
-    }, {
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: require('./babel.prod')
-    }, {
-      test: /\.json$/,
-      loader: 'json'
-    }, {
-      test: /\.scss$/,
-      loader: 'css/locals?modules&importLoaders=1&localIdentName=[hash:base64:5]'
-    }]
+    loaders: [
+      {
+        test: /\.html$/,
+        loader: 'html'
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: require('./babel.prod')
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
+      },
+      {
+        test: /\.scss$/,
+        loader: 'css/locals?modules&importLoaders=1&localIdentName=[hash:base64:5]'
+      }
+    ]
   }
 };

@@ -49,22 +49,25 @@ module.exports = {
   postcss: require('./postcss.config'),
 
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel',
-      query: require('./babel.prod')
-    }, {
-      test: /\.scss$/,
-      // ExtractTextPlugin is not yet compatible with Webpack 2
-      // { loader: 'loaderName', query: {...} } loader syntax
-      loader: ExtractTextPlugin.extract({
-        fallbackLoader: 'style',
-        loader: [
-          'css?modules&importLoaders=1&localIdentName=[hash:base64:5]',
-          'postcss'
-        ]
-      })
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: require('./babel.prod')
+      },
+      {
+        test: /\.scss$/,
+        // ExtractTextPlugin is not yet compatible with Webpack 2
+        // { loader: 'loaderName', query: {...} } loader syntax
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style',
+          loader: [
+            'css?modules&importLoaders=1&localIdentName=[hash:base64:5]',
+            'postcss'
+          ]
+        })
+      }
+    ]
   }
 };

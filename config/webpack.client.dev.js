@@ -48,7 +48,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: require('./babel.dev')
-      }, {
+      },
+      {
         test: /\.scss$/,
         loaders: [
           'style',
