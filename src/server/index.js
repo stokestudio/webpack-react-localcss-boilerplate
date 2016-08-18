@@ -4,7 +4,7 @@ import { template } from 'lodash';
 import morgan from 'morgan';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { RouterContext, createMemoryHistory, match } from 'react-router';
+import { RouterContext, createMemoryHistory, match } from 'react-router/es6';
 import routes from '../client/routes';
 import htmlTemplate from './index-template.html';
 

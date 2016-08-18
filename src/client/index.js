@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import { Router, applyRouterMiddleware, browserHistory, match } from 'react-router';
+import { Router, applyRouterMiddleware, browserHistory, match } from 'react-router/es6';
 import { useScroll } from 'react-router-scroll';
 import { logPageView } from './analytics';
 
