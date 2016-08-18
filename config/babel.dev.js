@@ -1,9 +1,9 @@
 module.exports = {
   presets: [
-    'babel-preset-es2015-native-modules',
-    'babel-preset-stage-0',
-    'babel-preset-react'
-  ].map(require.resolve),
+    ['es2015', { modules: false }],
+    'stage-0',
+    'react'
+  ],
   plugins: [
     'babel-plugin-lodash',
     'react-hot-loader/babel'
