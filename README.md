@@ -5,8 +5,7 @@
 - Webpack 2 (beta)
 - React with react-router
 - Client-side
-  - CSS Autoprefixer
-  - Postcss calc, mixins, pxtorem, and flexbox fixes
+  - SASS + PostCSS (autoprefixer, pxtorem, and automatic flexbox fixes)
   - Optimized cross-browser font rendering
   - HTML responsive meta tag
   - Ready for Google Analytics tracking compatible with react-router

@@ -64,7 +64,8 @@ module.exports = {
           fallbackLoader: 'style',
           loader: [
             'css?modules&importLoaders=1&localIdentName=[hash:base64:5]',
-            'postcss'
+            'postcss',
+            'sass'
           ]
         })
       }

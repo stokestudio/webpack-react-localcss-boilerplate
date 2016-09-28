@@ -29,8 +29,8 @@
     "json-loader": "^0.5.4",
     "lodash": "^4.16.2",
     "morgan": "^1.7.0",
+    "node-sass": "^3.10.0",
     "postcss-assets": "^4.1.0",
-    "postcss-calc": "^5.3.1",
     "postcss-flexbugs-fixes": "^2.0.0",
     "postcss-loader": "^0.13.0",
     "postcss-pseudo-class-any-link": "^1.0.0",
@@ -43,6 +43,7 @@
     "react-hot-loader": "^3.0.0-beta.4",
     "react-router": "^2.8.1",
     "react-router-scroll": "^0.3.2",
+    "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "2.1.0-beta.22",
     "whatwg-fetch": "^1.0.0"
