@@ -5,7 +5,6 @@ module.exports = {
     'react'
   ],
   plugins: [
-    'babel-plugin-lodash',
-    'babel-plugin-transform-react-constant-elements'
+    'babel-plugin-lodash'
   ].map(require.resolve)
 };
