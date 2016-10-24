@@ -1,7 +1,7 @@
 # Webpack / React / Local CSS Boilerplate
 
 ## Features
-- ES2015 / Babel (stage 0)
+- Babel (Latest ES + Stage 2)
 - Webpack 2 (beta)
 - React with react-router
 - Client-side
@@ -21,6 +21,8 @@
 - Supported Browsers: last 2 major versions of current browsers + IE11
   - Configured in CSS Autoprefixer
   - Promise polyfill for IE11
+
+*Many of these features come from [stoke-react-scripts](https://github.com/stokestudio/stoke-react-scripts)*.
 
 ## Running things
 
