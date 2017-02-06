@@ -2,7 +2,7 @@
 
 ## Features
 - Babel (Latest ES + Stage 2)
-- Webpack 2.2 (RC)
+- Webpack 2.2
 - React with react-router
 - Client-side
   - SASS + PostCSS (autoprefixer, pxtorem, and automatic flexbox fixes)
