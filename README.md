@@ -2,9 +2,10 @@
 
 ## Features
 - Babel (Latest ES + Stage 2)
-- Webpack 2.2
-- React with react-router
+- Webpack 3
+- React with react-router v4
 - Client-side
+  - [Styled Components](https://github.com/styled-components/styled-components)
   - SASS + PostCSS (autoprefixer, pxtorem, and automatic flexbox fixes)
   - Optimized cross-browser font rendering
   - HTML responsive meta tag
