@@ -1,10 +1,10 @@
 import React from 'react';
-import Content from './Content';
+import ContentArea from '../components/ContentArea';
 
 const About = () => (
-  <Content>
+  <ContentArea>
     <h1>About Component</h1>
-  </Content>
+  </ContentArea>
 );
 
 export default About;

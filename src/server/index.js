@@ -4,8 +4,9 @@ import { template } from 'lodash';
 import morgan from 'morgan';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { RouterContext, createMemoryHistory, match } from 'react-router/es6';
-import routes from '../client/routes';
+import { StaticRouter } from 'react-router';
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
+import App from '../client/App';
 import htmlTemplate from './index-template.html';
 
 const app = express();
@@ -18,21 +19,26 @@ app.use('/assets', express.static('assets'));
 const compiledTemplate = template(htmlTemplate);
 
 app.get('*', function (req, res) {
-  const history = createMemoryHistory(req.originalUrl);
+  const context = {};
+  const sheet = new ServerStyleSheet();
 
-  match({ routes, history }, (error, redirectLocation, renderProps) => {
-    if (error) {
-      res.status(500).send(error.message);
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-    } else if (renderProps) {
-      const content = renderToString(<RouterContext {...renderProps} />);
-      const html = compiledTemplate({ content });
-      res.status(200).send(html);
-    } else {
-      res.status(404).send('Not found');
-    }
-  });
+  const markup = renderToString(
+    <StaticRouter context={context} location={req.originalUrl}>
+      <StyleSheetManager sheet={sheet.instance}>
+        <App />
+      </StyleSheetManager>
+    </StaticRouter>
+  );
+
+  if (context.url) {
+    res.redirect(302, context.url);
+  } else {
+    const html = compiledTemplate({
+      css: sheet.getStyleTags(),
+      content: markup
+    });
+    res.status(context.status || 200).send(html);
+  }
 });
 
 const PORT = process.env.PORT || 7000;

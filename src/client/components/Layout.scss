@@ -36,21 +36,3 @@
     max-width: 100%;
   }
 }
-
-.header {
-  background: #eee;
-  font-size: 24px;
-  padding: 30px 0;
-
-  nav {
-    display: block;
-    font-size: 18px;
-    margin-top: 15px;
-
-    :any-link {
-      display: inline-block;
-      margin-right: 20px;
-      text-decoration: none;
-    }
-  }
-}
